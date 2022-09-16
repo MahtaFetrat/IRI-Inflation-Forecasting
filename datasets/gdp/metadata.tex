@@ -1,0 +1,61 @@
+\documentclass[fleqn]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[]{hyperref}
+%In order to write persian in latex, with "texlive" distro installed, two additional packages are needed: texlive-xetex & texlive-lang-arabic
+
+\hypersetup{
+  colorlinks=true,
+}
+
+\begin{document}
+
+
+%Header & Footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Metadata}
+\chead{Inflation Analysis}
+\rhead{GDP}
+\rfoot{Page \thepage}
+
+\title{GDP Dataset Metadata}
+\date{}
+\maketitle
+
+%Document Body
+\newpage
+
+\chapter*{Dataset}
+\section*{Overview}
+This dataset contains information about the GDP index of IR and its changes over the years 1341 to 1400 (solar hijri calendar). The base year for the calculations of the GDP index in this dataset is 1390.
+\section*{Details}
+\begin{center}
+    \begin{tabular}{|l|ll|}
+        \hline
+        \multirow{3}{*}{Columns} & \multicolumn{1}{l|}{year}       & Solar hijri year                             \\ \cline{2-3} 
+                                 & \multicolumn{1}{l|}{GDP}        & Corresponding GDP                            \\ \cline{2-3} 
+                                 & \multicolumn{1}{l|}{GDP growth} & GDP growth with respect to the previous year \\ \hline
+        Row Count                & \multicolumn{2}{l|}{60}                                                        \\ \hline
+        Time Range               & \multicolumn{2}{l|}{1341-1400  (solar hijri calendar)}                             \\ \hline
+    \end{tabular}
+\end{center}
+
+\chapter*{Source}
+\section*{Original Dataset}
+\begin{itemize}
+    \item Web page: \href{https://www.amar.org.ir/%D8%AF%D8%A7%D8%AF%D9%87%D9%87%D8%A7-%D9%88-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A2%D9%85%D8%A7%D8%B1%DB%8C/%D8%AD%D8%B3%D8%A7%D8%A8-%D9%87%D8%A7%DB%8C-%D9%85%D9%84%DB%8C-%D9%88-%D9%85%D9%86%D8%B7%D9%82%D9%87%D8%A7%DB%8C/%D8%AD%D8%B3%D8%A7%D8%A8%D9%87%D8%A7%DB%8C-%D9%85%D9%84%DB%8C#5603751--}{Statistical Center of IR}
+    \item Downloadable File: \href{https://www.amar.org.ir/Portals/0/PropertyAgent/461/Files/6672/Annual_Accounts_1340-1398_base1390_BL.xlsx}{Statistical Center of IR}
+\end{itemize}
+\section*{Missing Data}
+The link below was used to fill in the GDP index of the years 1399 and 1400 which were missing in the original dataset. 
+\begin{itemize}
+    \item Web page: \href{https://www.amar.org.ir/news/ID/18436/%D9%86%D8%B1%D8%AE-%D8%B1%D8%B4%D8%AF-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-1400}{Statistical Center of IR}
+    \item Downloadable File: \href{https://www.amar.org.ir/Portals/0/News/1400/roshde%201400.pdf?ver=K4G5UWe8_VsFbip8dPoiOA%3D%3D}{Statistical Center of IR}
+\end{itemize}
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[fleqn]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage[]{hyperref}
+%In order to write persian in latex, with "texlive" distro installed, two additional packages are needed: texlive-xetex & texlive-lang-arabic
+
+\definecolor{light-gray}{RGB}{230, 230, 230}
+
+\hypersetup{
+  colorlinks=true,
+}
+
+\begin{document}
+
+
+%Header & Footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Metadata}
+\chead{Inflation Analysis}
+\rhead{Monthly CPI}
+\rfoot{Page \thepage}
+
+\title{Monthly CPI Dataset Metadata}
+\date{}
+\maketitle
+
+%Document Body
+\newpage
+
+\chapter*{Dataset}
+\section*{Overview}
+This dataset contains information about the monthly CPI index of IR over the time period 01/01/1361 to 04/01/1401 (solar hijri calendar in M/D/Y format).
+\section*{Details}
+\begin{center}
+    \begin{tabular}{|l|ll|}
+        \hline
+        \multirow{3}{*}{Columns} & \multicolumn{1}{l|}{date}        & Solar hijri date in M/D/Y format            \\ \cline{2-3} 
+                                 & \multicolumn{1}{l|}{monthly CPI}  & Corresponding CPI                           \\ \cline{2-3} \hline
+        Row Count                & \multicolumn{2}{l|}{484}                                                        \\ \hline
+        Time Range               & \multicolumn{2}{l|}{01/01/1361-04/01/1401  (solar hijri calendar in M/D/Y format)}                         \\ \hline
+    \end{tabular}
+\end{center}
+
+\chapter*{Source}
+\begin{itemize}
+    \item Web page: \href{https://www.amar.org.ir/%D8%AF%D8%A7%D8%AF%D9%87%D9%87%D8%A7-%D9%88-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A2%D9%85%D8%A7%D8%B1%DB%8C/%D8%B4%D8%A7%D8%AE%D8%B5%D9%87%D8%A7%DB%8C-%D9%82%DB%8C%D9%85%D8%AA/%D8%B4%D8%A7%D8%AE%D8%B5-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%B5%D8%B1%D9%81-%DA%A9%D9%86%D9%86%D8%AF%D9%87#5645851--}{Statistical Center of IR}
+    \item Downloadable File: \href{https://www.amar.org.ir/Portals/0/PropertyAgent/461/Files/13026/2302u220940104.xlsx}{Statistical Center of IR}
+\end{itemize}
+
+ \end{document}

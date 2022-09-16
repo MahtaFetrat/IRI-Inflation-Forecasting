@@ -1,0 +1,60 @@
+\documentclass[fleqn]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage[]{hyperref}
+%In order to write persian in latex, with "texlive" distro installed, two additional packages are needed: texlive-xetex & texlive-lang-arabic
+
+\definecolor{light-gray}{RGB}{230, 230, 230}
+
+\hypersetup{
+  colorlinks=true,
+}
+
+\begin{document}
+
+
+%Header & Footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Metadata}
+\chead{Inflation Analysis}
+\rhead{Exchange Rate}
+\rfoot{Page \thepage}
+
+\title{Exchange Rate Dataset Metadata}
+\date{}
+\maketitle
+
+%Document Body
+\newpage
+
+\chapter*{Dataset}
+\section*{Overview}
+This dataset contains the monthly average of the exchange rate of USD over the time period 01/01/1371 to 01/05/1401 (solar hijri calendar in M/D/Y format).
+\section*{Details}
+\begin{center}
+    \begin{tabular}{|l|ll|}
+        \hline
+        \multirow{3}{*}{Columns} & \multicolumn{1}{l|}{date}       & Solar hijri date in M/D/Y format                          \\ \cline{2-3} 
+                                 & \multicolumn{1}{l|}{USD}        & USD value in IR Rials                        \\ \cline{2-3} \hline
+        Row Count                & \multicolumn{2}{l|}{365}                                                       \\ \hline
+        Time Range               & \multicolumn{2}{l|}{01/01/1371-05/01/1401  (solar hijri calendar in M/D/Y format)}             \\ \hline
+    \end{tabular}
+\end{center}
+
+\chapter*{Source}
+\section*{Original Dataset}
+The original dataset provides a daily record of the exchange rate. The dataset is converted to contain average monthly reports with a simple preprocessing step.
+The original dataset is available in 
+\href{https://www.cbi.ir/exratesadv/exratesadv_en.aspx}{this page}
+ from the Central Bank of Iran.
+
+\section*{Missing Data}
+The data missing datat for the last month of the year 1379 in the original dataset has been filled by averaging the trend of the months before and after it which seemed to be stable at the mentioned time interval.
+ \end{document}

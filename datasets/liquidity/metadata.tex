@@ -1,0 +1,77 @@
+\documentclass[fleqn]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage[]{hyperref}
+%In order to write persian in latex, with "texlive" distro installed, two additional packages are needed: texlive-xetex & texlive-lang-arabic
+
+\definecolor{light-gray}{RGB}{230, 230, 230}
+
+\hypersetup{
+  colorlinks=true,
+}
+
+\begin{document}
+
+
+%Header & Footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Metadata}
+\chead{Inflation Analysis}
+\rhead{Liquidity}
+\rfoot{Page \thepage}
+
+\title{Liquidity Dataset Metadata}
+\date{}
+\maketitle
+
+%Document Body
+\newpage
+
+\chapter*{Dataset}
+\section*{Overview}
+This dataset contains information about the liquidity of IR over the years 1344 to 1400 (solar hijri calendar) in billions of the IR currency, i.e. Rials.
+\section*{Details}
+\begin{center}
+    \begin{tabular}{|l|ll|}
+        \hline
+        \multirow{3}{*}{Columns} & \multicolumn{1}{l|}{year}       & Solar hijri year                             \\ \cline{2-3} 
+                                 & \multicolumn{1}{l|}{liquidity}  & Corresponding liquidity (billion Rials)      \\ \cline{2-3} \hline
+        Row Count                & \multicolumn{2}{l|}{57}                                                        \\ \hline
+        Time Range               & \multicolumn{2}{l|}{1344-1400  (solar hijri calendar)}                         \\ \hline
+    \end{tabular}
+\end{center}
+
+\chapter*{Source}
+\section*{Original Dataset}
+\subsection*{Years 1352-1399}
+This dataset is available in 
+\href{https://tsd.cbi.ir/DisplayEn/Content.aspx}{this page}
+ from the Central Bank of Iran under the menu \colorbox{light-gray}{Monetary and Credit Aggregates \textgreater\ Liquidity \textgreater\ Liquidity (by its Components)}.
+
+\subsection*{Years 1344-1385}
+\begin{itemize}
+    \item Web page: \href{https://www.amar.org.ir/%D8%AF%D8%A7%D8%AF%D9%87%D9%87%D8%A7-%D9%88-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A2%D9%85%D8%A7%D8%B1%DB%8C/%D9%BE%D9%88%D9%84%DB%8C-%D9%88-%D9%85%D8%A7%D9%84%DB%8C/%D8%A7%D9%85%D9%88%D8%B1-%D8%A8%D8%A7%D9%86%DA%A9%DB%8C-%D9%88-%D9%BE%D9%88%D9%84%DB%8C}{Statistical Center of IR}
+    \item Downloadable File: \href{https://www.google.com/url?q=https://www.amar.org.ir/Portals/0/PropertyAgent/461/Files/615/naghdinegi_esfand85-1344.xls&sa=D&source=docs&ust=1660713151353064&usg=AOvVaw1xvy_whXwRzHEztm8-MUzK}{Statistical Center of IR}
+\end{itemize}
+
+\section*{Missing Data}
+The information in 
+\href{https://www.cbi.ir/showitem/23406.aspx}{this report}
+ from the Central Bank of Iran was used to fill in the liquidity of the years 1400 was missing in the original dataset. 
+
+\section*{Malformed Data}
+In the datasets referenced eariler, the liquidity values of years 1394-1399 have been written in thousand billion Rials instead of billion Rials. The source to this correction and the right values of liquidity over these years can be found in the following two reports from the Central Bank of Iran.
+
+\begin{itemize}
+    \item Year 1394: \href{https://www.cbi.ir/page/16349.aspx}{Central Bank of Iran} 
+    \item Years 1395-1399: \href{https://www.cbi.ir/Newestdoc.aspx?id=0&dn=AnnualReview_fa&dl=1}{Central Bank of Iran} 
+\end{itemize}
+
+ \end{document}

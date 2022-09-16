@@ -1,0 +1,66 @@
+\documentclass[fleqn]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage[]{hyperref}
+%In order to write persian in latex, with "texlive" distro installed, two additional packages are needed: texlive-xetex & texlive-lang-arabic
+
+\definecolor{light-gray}{RGB}{230, 230, 230}
+
+\hypersetup{
+  colorlinks=true,
+}
+
+\begin{document}
+
+
+%Header & Footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Metadata}
+\chead{Inflation Analysis}
+\rhead{CPI Factors}
+\rfoot{Page \thepage}
+
+\title{CPI Factors Dataset Metadata}
+\date{}
+\maketitle
+
+%Document Body
+\newpage
+
+\chapter*{Dataset}
+\section*{Overview}
+This dataset contains information about the monthly value of the CPI index of IR and the factors that are taken into account in its calculation over the time period 01/01/1390 to 04/01/1401 (solar hijri calendar in M/D/Y format).
+\section*{Details}
+\begin{center}
+    \begin{tabular}{|l|ll|}
+        \hline
+        \multirow{3}{*}{Columns} & \multicolumn{1}{l|}{food and beverages}       & The food and beverages group index                            \\ \cline{2-3} 
+                                 & \multicolumn{1}{l|}{apparel}  & The apparel group index      \\ \cline{2-3}
+                                 & \multicolumn{1}{l|}{furniture}  & The furniture group index      \\ \cline{2-3}
+                                 & \multicolumn{1}{l|}{medical care}  & The medical car group index    \\ \cline{2-3}
+                                 & \multicolumn{1}{l|}{transportation}  & The transportation group index      \\ \cline{2-3}
+                                 & \multicolumn{1}{l|}{communication}  & The communication group index      \\ \cline{2-3}
+                                 & \multicolumn{1}{l|}{recreation}  & The recreation group index      \\ \cline{2-3}
+                                 & \multicolumn{1}{l|}{education}  & The education group index      \\ \cline{2-3}
+                                 & \multicolumn{1}{l|}{hotel and restaurant}  & The hotel and restaurant group index      \\ \cline{2-3}
+                                 & \multicolumn{1}{l|}{other goods and services}  & The other goods and services group index      \\ \cline{2-3}
+                                 & \multicolumn{1}{l|}{CPI}  & The CPI index      \\ \cline{2-3} \hline
+        Row Count                & \multicolumn{2}{l|}{136}                                                        \\ \hline
+        Time Range               & \multicolumn{2}{l|}{01/01/1390-04/01/1401 (solar hijri calendar in M/D/Y format)}                         \\ \hline
+    \end{tabular}
+\end{center}
+
+\chapter*{Source}
+\begin{itemize}
+    \item Web page: \href{https://www.amar.org.ir/%D9%BE%D8%A7%DB%8C%DA%AF%D8%A7%D9%87-%D9%87%D8%A7-%D9%88-%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87-%D9%87%D8%A7/%D8%B3%D8%B1%DB%8C%D9%87%D8%A7%DB%8C-%D8%B2%D9%85%D8%A7%D9%86%DB%8C/agentType/ViewType/PropertyTypeID/2061}{Statistical Center of IR}
+    \item Downloadable File: \href{https://www.amar.org.ir/Portals/0/PropertyAgent/461/Files/9346/2302n220140104.xlsx}{Statistical Center of IR}
+\end{itemize}
+
+ \end{document}
